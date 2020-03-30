@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf"  name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    *{
+      margin: 0;
+      padding: 0; 
+      
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+    li{
+        float: left;
+    }
+
+    li a{
+        display: inline-block;
+        text-align:center;
+        text-decoration: none;
+        padding: 35px 35px;
+        color: grey;
+        border-radius: 50%;
+        
+    }
+
+    li a:hover{
+        background-color:  #474e5d;
+    }
+    
+    ul li a:hover:not(.active){
+        background-color:#2d313a;
+    }
+    
+    ul li a.active{
+        background-color:#474e5d;
+    }
+
+    body{
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        background-color: grey;
+    }
+    .about-section {
+        padding: 16px;
+        text-align: center;
+        background-color: #2d313a;
+        color: rgb(252, 252, 252);
+       
+    }
+    .container {
+         padding: 16px 18px;
+    }
+    .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    .title {
+    color: grey;
+    }
+
+    
+    img.Image-border{
+        border: 10px solid;
+        border-radius: 50%;
+        border-color: #2d313a;
+    }
+
+    @media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+.paddingContact-container {
+    padding: 68px 15px 72px !important;
+}
+.container h1.white, .company-heading h1 {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 100 !important;
+    text-transform: capitalize;
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+.control-group {
+  margin-bottom: 15px;
+}
+.form {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.white {
+    color: #fff;
+}
+.container p {
+    font-style: normal !important;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0px;
+}
+.theme-selector {
+  display: none;
+}
+.contact-page-form h3 {
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.parallax {
+    background-attachment: inherit !important;
+}
+.parallax {
+    background-attachment: inherit !important;
+    background-repeat: repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    z-index: -10;
+    height: 300px
+}
+h3 {
+    font-size: 20px;
+    margin: 35px 0px 25px;
+    font-weight: 800;
+    color: #3d3d3d;
+    text-transform: uppercase;
+}
+
+.map-overlay h3 {
+    color: #fff;
+    border-bottom: 2px solid #d2282e;
+    padding-bottom: 15px;
+}
+
+.map-overlay {
+    background: #000;
+    -webkit-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.75);
+    box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.75);
+    width: 500px;
+    height: 320px;
+    position: relative;
+    float: left;
+    z-index: 300;
+    left: 0px;
+    top: 675px;
+    padding: 25px;
+    margin-top: -550px;
+    border: 3px solid #fff;
+}
+
+.marginBottom40 {
+    margin-bottom: 40px;
+}
+
+.map-overlay p {
+    color: #fff;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+.contact-right-info {
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 991px) {
+  .contact-right-info {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contact-right-info {
+    text-align: left;
+  }
+  .map-overlay {
+    left: 0px;
+  }
+}  
+   
+
+</style>
+
+<head>
+    <title>Original Company | Contact
+
+    </title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+</head>
+<body>
+    <ul>
+    <div><nav>
+        <a href="index.html" ><img style="float: left;"  src="images/logo.png" height="100px" width="100px" ></a>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a class =active href="Contact.html">Contact</a></li>
+    </ul>
+    </nav></div>
+    <div class = "about-section"> 
+        <h1>Contact Us or Make a booking</h1>
+
+    </div>
+      <div> 
+                <p style="font-size: x-large;" class ="white">Lets make a booking</p>
+              </div>
+    <form action="//submit.form" id="ContactUs100" method="post" onsubmit="return ValidateForm(this);">
+        <script type="text/javascript">
+        function ValidateForm(frm) {
+        if (frm.Name.value == "") { alert('Name is required.'); frm.Name.focus(); return false; }
+        if (frm.FromEmailAddress.value == "") { alert('Email address is required.'); frm.FromEmailAddress.focus(); return false; }
+        if (frm.FromEmailAddress.value.indexOf("@") < 1 || frm.FromEmailAddress.value.indexOf(".") < 1) { alert('Please enter a valid email address.'); frm.FromEmailAddress.focus(); return false; }
+        if (frm.Comments.value == "") { alert('Please enter comments or questions.'); frm.Comments.focus(); return false; }
+        return true; }
+        </script>
+        <table style="width:550px;border:0;" cellpadding="8" cellspacing="0">
+        <tr> <td>
+        <label style="font-size: larger;" for="Name">Name*:</label>
+        </td> <td>
+        <input name="Name" type="text" maxlength="60" style="width:250px;" />
+        </td> </tr> <tr> <td>
+        <label style="font-size: larger;" for="PhoneNumber">Phone number:</label>
+        </td> <td>
+        <input name="PhoneNumber" type="text" maxlength="43" style="width:250px;" />
+        </td> </tr> <tr> <td>
+        <label style="font-size: larger;" for="FromEmailAddress">Email address*:</label>
+        </td> <td>
+        <input name="FromEmailAddress" type="text" maxlength="90" style="width:250px;" />
+        </td> </tr> <tr> <td>
+        <label style="font-size: larger;" for="Comments">Comments or bookings*:</label>
+        </td> <td>
+        <textarea name="Comments" rows="7" cols="40" style="width:350px;"></textarea>
+        </td> </tr> <tr> <td>
+        * - required fields
+        </td> <td>
+        <div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
+        <input style="font-size: larger;" name="skip_Submit" type="submit" value="Submit" />
+        <script src="https://www.100forms.com/js/FORMKEY:2SPJXY5YHQCX" type="text/javascript"></script>
+        </td> </tr>
+        </table>
+        </form>
+
+        <div class="container paddingContact-container">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Contact us</p>
+              </div>
+           
+              <div class="col-md-5 contact-right-info">
+                <h2>Original Company </h2><img style="float: left;" src="images/logo.png" height="200px" width="200px" >
+                <p style="color: #000000">Address unavailable at this point<br />
+                
+                  <h2>Tashreeq Samodien</h2><a href="tel:+27608648233">+27608648233</a>
+                </p>
+                <h2>EMAIL ADDRESS</h2>
+                <a href="mailto:originalcompany97@gmail.com">admin@originalcompany.co.za</a>
+                
+              </div>
+            </div>
+          </div>
+        
+</body>
+</html>
